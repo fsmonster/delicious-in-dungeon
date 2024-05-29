@@ -1,0 +1,124 @@
+/* 视觉轮播图 */
+.pv.swiper-boder{
+    position: relative;
+    margin: 5vh;
+    margin-bottom: 3rem;
+    width: 70vw;
+    height: 40vw;
+    max-width: 900px;
+    max-height: 500px;
+    min-width: 35vw;
+    min-height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-image: url(./../source/imgs/轮播图/movie-frame.png) 33% fill / 3em repeat;
+}
+
+.pv-swiper {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.pv-swiper .pv-swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pv-swiper .pv-swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 分页器 */
+#pv-swiper-pagination{
+    bottom: -2rem;
+    top: unset;
+}
+
+.swiper-pagination-bullet{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    border-radius: 0;
+    background-color: #676767;
+    opacity: .8;
+}
+.swiper-pagination-bullet-active{
+    opacity: 1;
+    background-color: #fff;
+}
+
+/* navigation */
+.pv-swiper-button-next,
+.pv-swiper-button-prev{
+    color:white;
+}
+
+.pv-swiper-button-prev:after,
+.swiper-rtl .swiper-button-nextter,
+.swiper-button-nextter,
+.swiper-rtl .swiper-button-prevter{
+    outline: none;
+}
+
+.pv-swiper-button-next:after,
+.swiper-rtl .pv-swiper-button-prev:after {
+    margin-left: 6.5rem;
+}
+
+.pv-swiper-button-prev:after,
+.swiper-rtl .pv-swiper-button-next:after {
+    margin-right: 6.5rem;
+}
+
+.swiper-button-next:after,
+.pv-swiper-button-prev:after{
+    font-weight: bolder;
+}
+
+/* 人物轮播图 */
+.character-swiper-container{
+    position: relative;
+    width: 25vw;
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-swiper{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.character-swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.character-swiper-slide img {
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 默认为none */
+    display: none;
+}
+
+.character-swiper-slide.active img{
+    display: block;
+}

@@ -1,0 +1,46 @@
+/* 边框 */
+.main-frame{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background: url("./../source/imgs/frame-mdl.webp") repeat-y;
+    background-size: 100%;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.main-frame::before{
+    content: "";
+    width: 100%;
+    min-height: calc(1/12*100vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./../source/imgs/frame-upr.webp") no-repeat;
+    background-size: 100%;
+}
+.main-frame::after{
+    content: "";
+    width: 100%;
+    min-height: calc(1/12*100vw);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("./../source/imgs/frame-btm.webp") no-repeat;
+    background-size: 100%;
+}
+.content-frame::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background: url("./../source/imgs/top-intro-illust.webp") no-repeat;
+    background-size: 100% 95%;
+    pointer-events: none;
+    z-index: -1;
+}

@@ -1,0 +1,39 @@
+/* 导航栏 */
+header{
+    padding: 1rem;
+    background: url(./../source/imgs/bg.webp)repeat-y center top;
+}
+
+.nav-container{
+    position: relative;
+}
+
+.nav-container::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    color: var(--main-color);
+    width: 10vh;
+    height: 10vh;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../source/imgs/sp-open.png);
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-item{
+    font-size: 1.5rem;
+    flex: 1;
+    text-align: center;
+}
+
+.nav-item a{
+    color: var(--main-color);
+    font-weight: 700;
+    text-decoration: none;
+}

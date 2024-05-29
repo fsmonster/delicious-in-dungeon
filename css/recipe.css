@@ -1,0 +1,71 @@
+.recipes-container{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-top: 2rem;
+}
+
+.recipe-list{
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: var(--main-color);
+}
+
+.recipe-item{
+    width: 44%;
+    margin: 0 2rem;
+}
+
+
+.recipe-container{
+    
+}
+
+.recipe-title {
+    width: fit-content;
+    margin: auto;
+}
+
+.recipe-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: #FFF solid .2rem;
+    filter: drop-shadow( .2rem .2rem .3rem #896429);
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: 1s;
+}
+.recipe-img:hover{
+    filter: drop-shadow( .5rem .5rem .5rem #896429);
+}
+
+.recipe-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.recipe-content{
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    margin-bottom: 2rem;
+    background: url(./../source/imgs/monster-frame.webp) center/100% 100% no-repeat;
+    filter: drop-shadow( .8rem .8rem .5rem #896429);
+}
+
+@media (max-width:1280px) {
+    .recipe-list{
+        flex-direction: column;
+    }
+    .recipe-item{
+        width: 70%;
+    }
+    .recipe-item:first-child{
+        margin-top: 2rem;
+    }
+}

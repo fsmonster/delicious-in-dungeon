@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'smallburg';
+    src: url(./../source/fonts/smallburg-Regular.ttf);
+}
+@font-face {
+    font-family: 'Swei';
+    src: url(./../source/fonts/SweiB2SugarCJKsc-Regular.ttf);
+}
+:root {
+    --main-color:#5f2e16;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: 'smallburg','Swei';
+    color: white;
+    /* 隐藏滚动条 */
+    overflow: -moz-hidden-unscrollable;
+}
+body
+{
+    background: url(./../source/imgs/background.webp)repeat-y center top;
+    background-size: 100%;
+}
+
+/* 隐藏滚动条 */
+html {
+    overflow: -moz-hidden-unscrollable;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+	overflow: auto;
+}
+
+/* 布局 */
+main{
+    position: relative;
+    min-height: fit-content;
+}
+
+.main-container{
+    padding:  0 3vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* logo */
+.logo-container{
+    width: 100%;
+    height: 30vh;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img{
+    width: 50%;
+    height: fit-content;
+}
+
+.logo-img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 标题 */
+.title{
+    font-size: 2.5rem;
+    width: fit-content;
+    margin: 1rem auto;
+    padding: 2.5rem 4rem 2rem 4rem;
+    text-align: center;
+    background: url(./../source/imgs/title-background.png) center/100% 100% no-repeat;
+}
+
+h3{
+    width: fit-content;
+    height: 12vh;
+    padding: 0 50px;
+    background: url(./../source/imgs/oldpaper.png) center/100% 100% no-repeat;
+    line-height: 10vh;
+    text-align: center;
+}
+
+.buttom-gap{
+    height: 40vh;
+}
+
+/* 人物介绍 */
+
+.character-container{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-top: 2rem;
+}
+
+/* 头像列表 */
+.character-avators{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avator{
+    width: 10vw;
+    height: 10vw;
+    margin: auto;
+    cursor: pointer;
+    background: url(./../source/imgs/人物/character-off.png) center/100% 100% no-repeat;
+}
+
+.avator.active{
+    width: 12vw;
+    height: 12vw;
+    background: url(./../source/imgs/人物/character-on.png) center/100% 100% no-repeat;
+    cursor: pointer;
+}
+
+.avator img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 人物轮播图part */
+.character-infos{
+    margin: 2rem;
+    display: flex;
+    color: var(--main-color);
+}
+
+.name-container{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 人物信息 */
+.character-info{
+    margin: 2rem;
+    font-size: 1.3rem;
+}
+
+.info-container{
+    display: none;
+    padding: 5%;
+    background-color: #fff;
+    filter: drop-shadow(1rem 1rem 0.75rem #333);
+    border: 10px black;
+    border-style: double;
+    border-radius: 10px;
+}
+
+.info-container.active{
+    display: block;
+}
+
+.info{
+    margin: 0.7rem 0;
+}
+
+@media(max-width:1280px){
+    .character-info{
+        margin: 1rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width:720px) {
+    .character-info{
+        margin: 0;
+        font-size: 0.8rem;
+    }
+}
